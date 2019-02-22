@@ -27,6 +27,7 @@
     "wpackagist-plugin/disable-gutenberg": "*",
     "wpackagist-plugin/ari-adminer": "*",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
+    "wpackagist-plugin/wp-sweep": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "*"
   }
 }
