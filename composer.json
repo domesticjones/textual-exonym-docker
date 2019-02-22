@@ -28,6 +28,7 @@
     "wpackagist-plugin/ari-adminer": "*",
     "wpackagist-plugin/favicon-by-realfavicongenerator": "*",
     "wpackagist-plugin/wp-sweep": "*",
+    "wpackagist-plugin/contact-form-7": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "*"
   }
 }

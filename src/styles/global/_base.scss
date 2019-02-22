@@ -3,11 +3,12 @@
   ---------------------------------------------------------------------- */
 $globalPad: 4vw;
 $globalPadTablet: 6vw;
-$globalPadMobile: 3rem;
+$globalPadMobile: 1rem;
 
 html,
 body {
   max-width: 100%;
+  background-color: $black;
 }
 
 .wrap {
@@ -17,7 +18,8 @@ body {
 }
 
 #container {
-  padding-top: $globalPad;
+  padding: $globalPad 0;
+  background-color: $white;
 }
 
 /**
@@ -54,13 +56,21 @@ a {
 }
 
 @media (max-width: 1024px) {
+  #container {
+    padding-: $globalPadTablet 0;
+  }
+
   .wrap {
     padding: 0 $globalPadTablet;
   }
 }
 
 @media (max-width: 768px) {
+  #container {
+    padding: 3rem 0 $globalPadMobile 0;
+  }
+
   .wrap {
-    padding: 0 $globalPadTablet;
+    padding: 0 $globalPadMobile;
   }
 }

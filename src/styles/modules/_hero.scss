@@ -1,0 +1,153 @@
+.module-hero {
+  @include grid(space-between, center);
+  padding: ($globalPad / 2) ($globalPad * 2);
+  position: relative;
+  min-height: 80vh;
+  background-color: $black;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
+    width: 40%;
+    height: 100%;
+    background-color: $blue-dark;
+    background-image: linear-gradient(135deg, $blue 0%,$blue-dark 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 35% 100%);
+  }
+}
+
+.hero-background {
+  position: absolute;
+  z-index: 0;
+  opacity: 0.43;
+  top: 0;
+  left: 0;
+  width: 75%;
+  height: 100%;
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+
+  span {
+    display: none;
+  }
+}
+
+.hero-content {
+  width: 40%;
+  position: relative;
+  z-index: 2;
+  color: $white;
+
+  .content {
+    color: $grey;
+    font-weight: $font-light;
+
+    li {
+      margin-bottom: 0.75em;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.hero-heading {
+  span {
+    display: block;
+  }
+
+  .tagline {
+    font-size: 0.55em;
+    color: $grey;
+    font-family: $font-default;
+    margin-bottom: 1em;
+    font-weight: $font-light;
+  }
+
+  .heading {
+    font-size: 2em;
+    text-transform: uppercase;
+  }
+}
+
+.hero-device {
+  width: 30%;
+  position: relative;
+  z-index: 2;
+
+  img {
+    display: block;
+    max-height: 70vh;
+  }
+}
+
+@media (max-width: 1280px) {
+  .hero-content {
+    width: 60%;
+  }
+}
+
+@media (max-width: 960px) {
+  .module-hero {
+    @include grid(flex-start, center, column);
+    background-color: $white;
+    padding: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .hero-heading {
+    @include grid(center, center, column);
+    background-color: transparentize($black, 0.66);
+    height: 60vw;
+    width: 100%;
+    padding: 0 $globalPadMobile;
+
+    .heading {
+      font-size: 1.5em;
+    }
+  }
+
+  .hero-content {
+    width: 100%;
+
+    .content {
+      padding: $globalPadTablet;
+      color: $black;
+      font-size: 1.25em;
+    }
+  }
+
+  .hero-background {
+    opacity: 1;
+    height: 60vw;
+    width: 100%;
+  }
+
+  .hero-device {
+    width: 100%;
+
+    img {
+      margin: 0 auto;
+      max-height: 100vh;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-heading {
+    font-size: 2em;
+  }
+
+  .hero-content .content {
+    font-size: 1.15em;
+  }
+}

@@ -1,5 +1,6 @@
 #header {
   position: fixed;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
@@ -12,6 +13,7 @@
 }
 
 .logo-header {
+  display: block;
   height: 2vw;
   width: auto;
 }
@@ -55,15 +57,42 @@
     top: 0.5em;
     left: 0.5em;
     background-color: $blue-trans;
-    @include transition();
-  }
-
-  &:hover::after {
-    top: 0.4em;
-    left: 0.4em;
   }
 }
 
 #responsive-nav-toggle {
   display: none;
+}
+
+@media (max-width: 1024px) {
+  #header .wrap {
+    height: $globalPadTablet;
+  }
+
+  .logo-header {
+    height: 2.5vw;
+    width: auto;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-header-buttons,
+  .nav-header {
+    display: none;
+  }
+
+  #responsive-nav-toggle {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  #header .wrap {
+    height: 3rem;
+  }
+
+  .logo-header {
+    height: 1.75rem;
+    width: auto;
+  }
 }

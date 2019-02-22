@@ -9,6 +9,7 @@ export default {
   	// HEADER: Responsive Nav Toggle
   	$('#responsive-nav-toggle').click(e => {
   		const $this = $(e.currentTarget);
+      $('#nav-responsive').toggleClass('is-active');
   		$this.toggleClass('is-active');
   	});
   },

@@ -1,10 +1,102 @@
-/**
-  Global Website Footer
-  ---------------------------------------------------------------------- */
-.nav-footer {
-  @include navMenu(vertical);
+#footer {
+  background-color: $black;
+  color: $white;
+  padding: ($globalPad / 1.5) $globalPad;
+  font-weight: $font-light;
+
+  a {
+    color: $white;
+    @include transition();
+
+    &:hover {
+      color: $grey;
+    }
+  }
+
+  .wrap {
+    @include grid(space-between, stretch);
+  }
 }
 
-/**
-  Responsive Breakpoints
-  ---------------------------------------------------------------------- */
+.footer-column {
+  @include grid(flex-start, flex-start, column);
+  padding-right: $globalPad * 2;
+  height: 100%;
+  @include navMenu(vertical);
+
+  a:not(.button) {
+    display: block;
+    padding: 0.5ex 0;
+  }
+
+  &.first {
+    ul li {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    a {
+      font-size: 0.75em;
+      font-style: $font-italic;
+    }
+
+    img {
+      height: $globalPad / 2;
+      margin-bottom: $globalPad / 2;
+    }
+  }
+
+  &.last {
+    margin-left: auto;
+    padding-right: 0;
+  }
+}
+
+.copyright {
+  padding-bottom: 0;
+  font-size: 0.75em;
+}
+
+.button.button-portal-footer {
+  background-color: $black;
+  border-color: $white;
+}
+
+
+@media (max-width: 768px) {
+  #footer {
+    padding: $globalPadMobile 0;
+    font-size: 1rem;
+  }
+
+  .footer-column {
+    display: none;
+    width: 100%;
+    text-align: center;
+    padding: 0;
+
+    img {
+      display: none;
+    }
+
+    &.first {
+      display: block;
+    }
+
+    ul li {
+      margin: 0 !important;
+      font-size: 0.8rem;
+
+      a {
+        display: block;
+        margin: 0;
+        padding: 0.5rem !important;
+      }
+    }
+
+    .copyright {
+      font-weight: $font-bold;
+      font-family: $font-heading;
+    }
+  }
+}
