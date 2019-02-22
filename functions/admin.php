@@ -38,3 +38,15 @@ $roleObject = get_role( 'editor' );
 if (!$roleObject->has_cap('edit_theme_options')) {
   $roleObject->add_cap('edit_theme_options');
 }
+
+// Add Global Pricing Options
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page(array(
+		'page_title' 	=> 'Textual Pricing',
+		'menu_title'	=> 'Pricing',
+		'menu_slug' 	=> 'textual-pricing',
+		'capability'	=> 'edit_posts',
+    'icon_url'    => 'dashicons-star-filled',
+    'position'    => '2'
+	));
+}

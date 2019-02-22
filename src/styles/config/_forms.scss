@@ -251,9 +251,13 @@ input[type="image"] {
     content: '';
     display: block;
     margin-right: 0.5em;
+    min-height: 1.25em;
     height: 1.25em;
+    max-height: 1.25em;
+    min-width: 1.25em;
     width: 1.25em;
-    background-size: contain;
+    max-width: 1.25em;
+    background-size: 95% 95%;
     background-repeat: no-repeat;
   }
 
