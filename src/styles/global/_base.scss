@@ -2,6 +2,8 @@
   Global Body & Wrappers
   ---------------------------------------------------------------------- */
 $globalPad: 4vw;
+$globalPadTablet: 6vw;
+$globalPadMobile: 3rem;
 
 html,
 body {
@@ -12,6 +14,10 @@ body {
   margin: 0 auto;
   max-width: 100%;
   position: relative;
+}
+
+#container {
+  padding-top: $globalPad;
 }
 
 /**
@@ -41,7 +47,7 @@ a {
   Responsive Breakpoints
   ---------------------------------------------------------------------- */
 
-@media (min-width: 1400px) {
+@media (min-width: 1025px) {
   .wrap {
     padding: 0 $globalPad;
   }
@@ -49,7 +55,12 @@ a {
 
 @media (max-width: 1024px) {
   .wrap {
-    width: 100%;
-    padding: 0 2rem;
+    padding: 0 $globalPadTablet;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 0 $globalPadTablet;
   }
 }

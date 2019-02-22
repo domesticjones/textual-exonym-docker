@@ -7,7 +7,7 @@
           {
             "modules": false,
             "targets": {
-              "ie9": true
+              "ie9": false
             }
           }
         ]
@@ -20,7 +20,7 @@
           {
             "modules": false,
             "targets": {
-              "ie9": true,
+              "ie9": false,
               "uglify": true
             }
           }

@@ -1,5 +1,10 @@
-$white: #fff;
-$grey: #ccc;
-$black: #000;
-$red: #f00;
-$blue: #00f;
+$white:       #fff;
+$white-trans: transparentize($white, 0.333);
+$grey:        #EBEBEB;
+$grey-trans:  transparentize($grey, 0.5);
+$green:       #A3D12E;
+$orange:      #FF4F00;
+$blue:        #0E719E;
+$blue-trans:  transparentize($blue, 0.666);
+$blue-dark:   #205287;
+$black:       #000;
