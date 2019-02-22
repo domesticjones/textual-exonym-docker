@@ -21,3 +21,10 @@
     $logo = $logoChosen['sizes'][$size];
     echo $logo;
   }
+
+  // Client Portal
+  function ex_clientportal($data) {
+    $portal = get_field('client_portal_link', 'options');
+    $link = $portal[$data];
+    echo $link;
+  }

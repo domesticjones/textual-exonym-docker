@@ -1,61 +1,13 @@
-/**
-  Global Website Header
-  ---------------------------------------------------------------------- */
-.header-top {
-  padding: 1rem 0;
-  z-index: 9999;
-  width: 100%;
+#header {
   background-color: $white;
 
   .wrap {
     @include grid(space-between, center);
-  }
-
-  .nav-social {
-    ul {
-      @include listStripped();
-      @include grid();
-
-      li {
-        margin: 0 0.5em;
-      }
-
-      a,
-      img {
-        display: block;
-        height: 2em;
-      }
-
-      span {
-        display: none;
-      }
-    }
+    height: $globalPad;
   }
 }
 
 .logo-header {
-  display: block;
-  height: 2.5rem;
-}
-
-#responsive-nav-toggle {
-  display: none;
-}
-
-/**
-  Responsive Breakpoints
-  ---------------------------------------------------------------------- */
-@media (max-width: 1024px) {
-  .header-top {
-    padding: 1rem;
-  }
-
-  .nav-header,
-  .header-top .nav-social {
-    display: none;
-  }
-
-  #responsive-nav-toggle {
-    display: block;
-  }
+  height: 2vw;
+  width: auto;
 }

@@ -28,7 +28,12 @@
               'fallback_cb' => ''									// fallback function (if there is one)
             )); ?>
           </nav>
-          <?php ex_social(); ?>
+					<nav class="nav-header-buttons">
+						<ul>
+							<li><a href="<?php ex_clientportal('url'); ?>" target="<?php ex_clientportal('target'); ?>" class="button button-outline"><?php ex_clientportal('title'); ?></a></li>
+							<li><a href="#demo" class="button button-dark button-demo-header">Request Demo</a></li>
+						</ul>
+					</nav>
 					<a href="#" id="responsive-nav-toggle">
 	          <span class="line"></span>
 	          <span class="line"></span>
