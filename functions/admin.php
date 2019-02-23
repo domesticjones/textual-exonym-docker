@@ -43,10 +43,10 @@ if (!$roleObject->has_cap('edit_theme_options')) {
 if( function_exists('acf_add_options_page') ) {
 	acf_add_options_page(array(
 		'page_title' 	=> 'Textual Pricing',
-		'menu_title'	=> 'Pricing',
+		'menu_title'	=> 'Pricing & CTA',
 		'menu_slug' 	=> 'textual-pricing',
 		'capability'	=> 'edit_posts',
     'icon_url'    => 'dashicons-star-filled',
-    'position'    => '2'
+    'position'    => '3'
 	));
 }

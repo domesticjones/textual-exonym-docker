@@ -17,7 +17,13 @@
           if($heading) { echo '<span class="heading">' . $heading . '</span>'; }
         ?>
       </h1>
-      <?php if($content) { echo '<div class="content">' . $content . '</div>'; } ?>
+      <?php
+        if($content) { echo '<div class="content">' . $content . '</div>'; }
+        echo '<div class="cta-wrap">';
+        echo do_shortcode('[contact-form-7 id="160" title="Call to Action (Hero)"]');
+          get_template_part('modules/module', 'cta-complete');
+        echo '</div>';
+      ?>
     </div>
     <div class="hero-device">
       <?php if($bgDevice) { echo '<img src="' . $bgDevice[0] . '" alt="Textual Shop By Text mock up" />'; } ?>

@@ -4,6 +4,7 @@
 		get_template_part('modules/wrap', 'start');
 			get_template_part('modules/module', 'hero');
 			get_template_part('modules/module', 'features');
+			get_template_part('modules/module', 'stats');
 			get_template_part('modules/module', 'pricing');
 		get_template_part('modules/wrap', 'end');
 	endwhile; endif;

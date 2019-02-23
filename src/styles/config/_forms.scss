@@ -5,20 +5,20 @@
 // Font
 $fh-font-family: $font-default !default;
 $fh-font-size: $font-size !default;
-$fh-font-color: $black !default;
+$fh-font-color: $grey !default;
 
 // Borders
 $fh-border-radius: 0 !default;
-$fh-border-width: 1px !default;
+$fh-border-width: 0 !default;
 $fh-border-style: solid !default;
-$fh-border-color: $black !default;
+$fh-border-color: transparent !default;
 
 // Inputs, Textareas, Select, Option
 $fh-input-height: 2.5em !default;
 $fh-input-width: 100% !default;
 $fh-input-max-width: auto !default;
-$fh-input-bg-color: $white !default;
-$fh-focus-bg-color: $grey !default;
+$fh-input-bg-color: transparent !default;
+$fh-focus-bg-color: transparent !default;
 $fh-focus-border-color: $fh-border-color !default;
 $fh-focus-font-color: $fh-font-color !default;
 
@@ -29,7 +29,7 @@ $fh-allow-select-vendor-styling: false !default;
 $fh-fieldset-bare: true !default;
 
 // Buttons & Input Submits
-$fh-button-height: 1.5em !default;
+$fh-button-height: 2.5em !default;
 $fh-button-width: auto !default;
 $fh-button-max-width: auto !default;
 $fh-button-font-color: $fh-font-color !default;
@@ -72,6 +72,20 @@ fieldset {
   display: $fh-display;
 
   @include center-layout;
+  @include transition(all 100ms ease);
+}
+
+@media (max-width: 1024px) {
+  input,
+  textarea,
+  select,
+  option,
+  optgroup,
+  button,
+  legend,
+  fieldset {
+    font-size: 1em;
+  }
 }
 
 datalist {
@@ -236,7 +250,7 @@ input[type="image"] {
   width: $fh-button-width;
   max-width: $fh-button-max-width;
   background-color: $fh-button-bg-color;
-  padding: ($fh-input-height / 2.25) ($fh-input-height / 4);
+  padding: 0 ($fh-input-height / 4);
   cursor: pointer;
   color: $fh-button-font-color;
   font-weight: $font-bold;
@@ -278,6 +292,16 @@ input[type="image"] {
 
     &::before {
       background-image: $icon-play-white;
+    }
+  }
+
+  &.button-white {
+    background-color: $white;
+    border: 2px solid $white;
+    color: $black;
+
+    &::before {
+      background-image: $icon-play-black;
     }
   }
 }
@@ -331,5 +355,59 @@ input[type="reset"]:focus {
     color: $white;
     background-color: $blue-dark;
     border-color: $blue-dark;
+  }
+
+  &.button-white {
+    color: $black;
+    background-color: $grey;
+    border-color: $grey;
+  }
+}
+
+/* Form Layouts ------------------ */
+.form-element {
+  border-bottom: 2px solid $white;
+  position: relative;
+  margin-bottom: 1em;
+  @include transition();
+
+  span {
+    display: block;
+  }
+
+  label {
+    position: absolute;
+    color: $grey;
+    font-style: $font-italic;
+    bottom: 0;
+    transform-origin: left;
+    @include transition();
+  }
+
+  input {
+    margin: 0;
+    padding-left: 0;
+  }
+
+  &.is-active {
+    border-color: $grey;
+
+    label {
+      transform: scale(0.65) translateY(-2em);
+      color: $grey-trans;
+    }
+  }
+
+  .wpcf7-not-valid-tip {
+    @include grid(center, center);
+    position: absolute;
+    z-index: 10;
+    bottom: 0;
+    right: 0;
+    background-color: $orange;
+    color: $white;
+    height: 2.5em;
+    font-size: 0.75em;
+    padding: 0 0.5em;
   }
 }

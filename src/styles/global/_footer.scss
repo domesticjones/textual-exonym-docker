@@ -60,6 +60,11 @@
 .button.button-portal-footer {
   background-color: $black;
   border-color: $white;
+
+  &:hover {
+    background-color: transparentize($grey-trans, 0.35);
+    border-color: $white;
+  }
 }
 
 
