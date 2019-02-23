@@ -29,7 +29,7 @@ $fh-allow-select-vendor-styling: false !default;
 $fh-fieldset-bare: true !default;
 
 // Buttons & Input Submits
-$fh-button-height: 2em !default;
+$fh-button-height: 1.5em !default;
 $fh-button-width: auto !default;
 $fh-button-max-width: auto !default;
 $fh-button-font-color: $fh-font-color !default;
@@ -236,7 +236,7 @@ input[type="image"] {
   width: $fh-button-width;
   max-width: $fh-button-max-width;
   background-color: $fh-button-bg-color;
-  padding: ($fh-input-height / 2) ($fh-input-height / 4);
+  padding: ($fh-input-height / 2.25) ($fh-input-height / 4);
   cursor: pointer;
   color: $fh-button-font-color;
   font-weight: $font-bold;
@@ -245,7 +245,7 @@ input[type="image"] {
   border: $fh-border-width $fh-border-style $fh-border-color;
   font-family: $font-heading;
   text-transform: uppercase;
-  @include transition();
+  @include transition(all 133ms ease);
 
   &::before {
     content: '';
@@ -321,13 +321,15 @@ input[type="button"]:focus,
 input[type="submit"]:focus,
 input[type="reset"]:focus {
   color: $fh-button-hover-font-color;
-  transform: scale(0.98);
 
   &.button-outline {
     color: $blue;
+    background-color: transparentize($grey-trans, 0.25);
   }
 
   &.button-dark {
     color: $white;
+    background-color: $blue-dark;
+    border-color: $blue-dark;
   }
 }

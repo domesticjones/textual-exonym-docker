@@ -1,3 +1,4 @@
+<?php get_template_part('modules/module-cta', 'demo'); ?>
 		</div>
 		<footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 			<div class="wrap">

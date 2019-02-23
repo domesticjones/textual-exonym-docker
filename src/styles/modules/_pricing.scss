@@ -1,0 +1,162 @@
+.module-pricing {
+  @include listStripped();
+  @include grid(space-around, stretch, row, wrap);
+  margin: $globalPad 0;
+}
+
+li.pricing-single {
+  @include grid(center, center, column);
+  flex: 1 1 0;
+  text-align: center;
+  margin: 0 ($globalPad / 2);
+  overflow: hidden;
+  background-color: $grey;
+
+  .name {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    background-color: $white;
+    width: 100%;
+    margin: 0;
+    padding: 0.5em 0;
+  }
+
+  .subscribers {
+    width: 100%;
+    background-color: $blue;
+    color: $white;
+    font-size: 3.25em;
+    padding-top: 0.25em;
+    margin-bottom: 0;
+
+    span {
+      padding: 0.5em 0;
+      font-size: 0.3em;
+      display: block;
+      font-weight: $font-light;
+      font-family: $font-default;
+    }
+  }
+
+  .icon {
+    @include grid(center, center);
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 100%;
+
+    span {
+      position: relative;
+      width: 30%;
+      max-width: 6em;
+      z-index: 1;
+      display: block;
+      padding: 0.5em;
+      border: 2px solid $blue;
+      background-color: $white;
+      border-radius: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      z-index: 0;
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 50%;
+    }
+
+    &::before {
+      top: 0;
+      background-color: $blue;
+    }
+
+    &::after {
+      bottom: 0;
+      background-color: $grey;
+    }
+  }
+
+  .messages {
+    font-size: 1.75em;
+    padding: 0.5em 0 0 0;
+    color: $blue;
+    width: 100%;
+    margin: 0;
+
+    span {
+      color: $black;
+      display: block;
+      font-size: 0.4em;
+      font-family: $font-default;
+      font-style: $font-italic;
+      font-weight: $font-normal;
+      padding: 0.5em 0;
+    }
+  }
+
+  .features {
+    @include listStripped();
+    margin: auto 0;
+    width: 100%;
+    background-color: $grey;
+    padding: $globalPadMobile $globalPadMobile;
+
+    p {
+      padding: 0.5em;
+      font-size: 0.75em;
+
+      strong {
+        display: block;
+        font-size: 1.25em;
+      }
+    }
+  }
+
+  .disclaimer {
+    padding: 1.5em 0;
+    font-size: 0.75em;
+  }
+}
+
+.pricing-button {
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0.25em;
+    z-index: 0;
+    background-color: $blue-trans;
+    width: calc(100% - 0.5em);
+    height: 0.5em;
+  }
+}
+
+@media (max-width: 1024px) {
+  li.pricing-single {
+    max-width: 50%;
+    width: calc(50% - #{$globalPad});
+    margin: $globalPad 0;
+    flex: initial;
+  }
+}
+
+@media (max-width: 768px) {
+  li.pricing-single {
+    max-width: 100%;
+    width: 100%;
+
+    .features {
+      margin: $globalPad 0;
+    }
+  }
+}
