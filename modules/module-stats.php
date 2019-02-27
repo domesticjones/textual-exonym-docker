@@ -28,7 +28,7 @@
             a 15.9155 15.9155 0 1 0 0 -31.831"
         />
         <text x="17" y="21.35" class="stat-pie-figure"><?php echo $number; ?></text>
-        <text x="22" y="17.35" class="stat-pie-figure-metric"><?php echo $metric; ?></text>
+        <text x="22.5" y="17.15" class="stat-pie-figure-metric"><?php echo $metric; ?></text>
       </svg>
     </div>
     <div class="stat-large-text">

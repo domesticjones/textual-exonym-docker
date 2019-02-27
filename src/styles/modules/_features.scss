@@ -45,7 +45,7 @@ li.feature-large {
 
 a.button.feature-cta {
   @include grid(flex-start, center);
-  font-size: 0.85em;
+  font-size: 1em;
   text-transform: none;
   font-family: $font-default;
   font-weight: $font-normal;
@@ -61,7 +61,6 @@ a.button.feature-cta {
 
   &:hover {
     transform: scale(1);
-    color: $black;
     background-color: transparent;
   }
 }

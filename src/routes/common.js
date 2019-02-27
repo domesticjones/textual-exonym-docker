@@ -38,25 +38,27 @@ export default {
       }
     });
 
-    // Scroll to CTA
-    const ctaObject = '#textual-demo-request';
-    function scrollToCta(target, speed = 2000) {
-      $('html, body').animate({
-        scrollTop: $(target).offset().top
-      }, speed);
-      $(`${target} input:visible:enabled:first`).focus();
+    // Scroll to Targets
+    function scrollToTarget(source, target, speed = 0) {
+      $(source).on('click', (e) => {
+        e.preventDefault();
+        $('html, body').animate({
+          scrollTop: $(target).offset().top
+        }, speed);
+        $(`${target} input:visible:enabled:first`).focus();
+      });
     }
-    $('a[href="#demo"]').on('click', (e) => {
-      e.preventDefault();
-      scrollToCta(ctaObject);
-    });
+    const ctaObject = '#textual-demo-request';
+    scrollToTarget('a[href="#demo"]', ctaObject);
 
     // Check for demo form submission
     document.addEventListener('wpcf7mailsent', (e) => {
       $('body').removeClass('textual-demo-true');
       $('body').addClass('textual-demo-false');
       localStorage.setItem('textualDemo', '1');
-      scrollToCta(ctaObject);
+      $('html, body').animate({
+        scrollTop: $(target).offset().top
+      }, 0);
     }, false);
 
     // Animate On Screen

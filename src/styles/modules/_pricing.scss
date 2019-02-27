@@ -1,7 +1,7 @@
 .module-pricing {
   @include listStripped();
   @include grid(space-around, stretch, row, wrap);
-  margin: $globalPad 0;
+  padding: $globalPad 0;
 }
 
 li.pricing-single {
@@ -158,6 +158,14 @@ li.pricing-single {
 
     .features {
       margin: $globalPad 0;
+
+      p {
+        font-size: 0.9em;
+      }
+    }
+
+    .pricing-button {
+      letter-spacing: 0.05ex;
     }
   }
 }

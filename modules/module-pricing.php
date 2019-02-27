@@ -1,6 +1,6 @@
 <?php
   if(have_rows('pricing', 'options')):
-    echo '<ul class="module-pricing">';
+    echo '<ul id="plans" class="module-pricing">';
     while(have_rows('pricing', 'options')): the_row();
       $plan = get_sub_field('plan');
       $info = get_sub_field('info');

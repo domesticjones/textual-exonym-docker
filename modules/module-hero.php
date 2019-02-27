@@ -1,9 +1,9 @@
 <?php
   $images = get_field('hero_images');
-  $randHero = $images[array_rand($images)];
-  $bgImage = wp_get_attachment_image_src($randHero['background']['ID'], 'jumbo');
-  $bgDevice = wp_get_attachment_image_src($randHero['device']['ID'], 'large');
   if($images):
+    $randHero = $images[array_rand($images)];
+    $bgImage = wp_get_attachment_image_src($randHero['background']['ID'], 'jumbo');
+    $bgDevice = wp_get_attachment_image_src($randHero['device']['ID'], 'large');
     $tagline = get_field('hero_tagline');
     $heading = get_field('hero_heading');
     $content = get_field('hero_content');

@@ -32,22 +32,19 @@
 
 #nav-responsive {
   position: absolute;
+  z-index: 0;
   width: 100%;
   top: 100%;
   left: 0;
   background-color: $blue;
   padding: ($globalPadMobile / 2) 0;
-  transform: scaleY(0);
+  transform: translateY(-100%);
   transform-origin: top;
   @include transition();
   @include navMenu(vertical);
 
   .wrap {
     height: auto !important;
-  }
-
-  &.is-active {
-    transform: scaleY(1);
   }
 
   #menu-responsive {
@@ -67,10 +64,26 @@
     font-family: $font-heading;
     text-transform: uppercase;
     font-size: 0.65rem;
+    opacity: 0;
+    @include transition();
 
     img {
       height: 1.75rem;
       margin-bottom: 0.5rem;
+    }
+  }
+
+  &.is-active {
+    transform: translateY(0);
+
+    a {
+      opacity: 1;
+    }
+
+    @for $i from 1 through 10 {
+      li:nth-child(#{$i}) a {
+        transition-delay: #{($i * 65) + 100}ms;
+      }
     }
   }
 }

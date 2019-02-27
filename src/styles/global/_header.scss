@@ -4,27 +4,31 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: $white;
 
-  .wrap {
+  & > .wrap {
     @include grid(space-between, center);
     height: $globalPad;
+    position: relative;
+    z-index: 1;
+    background-color: $white;
   }
 }
 
 .logo-header {
   display: block;
-  height: 2vw;
+  height: 1.5vw;
   width: auto;
 }
 
 .nav-header {
   @include navMenu('horizontal');
+  font-size: 0.9em;
+  letter-spacing: 0.025ex;
 
   a {
     text-transform: uppercase;
     color: $black;
-    padding: 1vw 1.5vw;
+    padding: 1vw 1.25vw;
     @include transition();
 
     &:hover {
@@ -34,29 +38,15 @@
 }
 
 .nav-header-buttons {
+  font-size: 0.85em;
+  letter-spacing: 0.035ex;
+
   ul {
     @include listStripped(inline-block);
 
     li {
       margin-left: 1em;
     }
-  }
-}
-
-.button-demo-header {
-  position: relative;
-  z-index: 1;
-
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -1;
-    top: 0.5em;
-    left: 0.5em;
-    background-color: $blue-trans;
   }
 }
 

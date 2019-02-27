@@ -1,6 +1,6 @@
 <?php
   if(have_rows('features')):
-    echo '<ul class="features-large">';
+    echo '<ul id="features" class="features-large">';
     while(have_rows('features')): the_row();
       $content = get_sub_field('content');
       $images = get_sub_field('images');
