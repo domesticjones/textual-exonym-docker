@@ -23,7 +23,7 @@ export default {
   },
   finalize() {
     // Input label Animation
-    $('input').each((i,e) => {
+    $('input, textarea').each((i,e) => {
       $(e).on('focus', () => {
         $(e).closest('.form-element').addClass('is-active');
         $(e).next('.wpcf7-not-valid-tip').fadeOut();
@@ -41,15 +41,25 @@ export default {
     // Focus first demo field on select
     function scrollToTarget(source, target, speed = 0) {
       $(source).on('click', (e) => {
+        let offset = 0;
         e.preventDefault();
+        if(target == '#contact') {
+          const widthUnit = ($(window).width()) / 100;
+          $('#contact-image, #contact').addClass('is-active');
+          offset = 8 * widthUnit;
+        }
         $('html, body').animate({
-          scrollTop: $(target).offset().top
+          scrollTop: $(target).offset().top - offset
         }, speed);
         $(`${target} input:visible:enabled:first`).focus();
       });
     }
     const ctaObject = '#demo';
     scrollToTarget('a[href="#demo"]', ctaObject);
+
+    // Contact Form Link
+    const contactObject = '#contact';
+    scrollToTarget('a[href="#contact"]', contactObject);
 
     // Check for demo form submission
     document.addEventListener('wpcf7mailsent', (e) => {

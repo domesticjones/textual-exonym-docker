@@ -18,7 +18,10 @@
         ?>
       </div>
       <div class="image">
-        <?php if($image) { echo '<img src="' . $image['sizes']['medium'] . '" alt="' . $image['alt'] . '" />'; } ?>
+        <?php
+          if($image) { echo '<img src="' . $image['sizes']['medium'] . '" alt="' . $image['alt'] . '" id="contact-image" />'; }
+          get_template_part('modules/module', 'contact');
+        ?>
       </div>
     </div>
   </footer>

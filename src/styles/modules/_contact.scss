@@ -1,0 +1,49 @@
+.module-contact {
+  background-color: $blue;
+  padding: ($globalPad / 4) ($globalPad / 2);
+  width: calc(100% - #{$globalPad * 2});
+  position: absolute;
+  opacity: 0;
+  margin-bottom: $globalPad;
+
+  p {
+    padding: 0;
+  }
+
+  button {
+    color: $blue;
+
+    &:hover {
+      color: $blue;
+    }
+
+    &::before {
+      background-image: $icon-play-blue;
+    }
+  }
+
+  .wpcf7-form {
+    @include grid(space-between, flex-end, row, wrap);
+  }
+
+  &.is-active {
+    position: relative;
+    opacity: 1;
+  }
+}
+
+#contact-image {
+  position: relative;
+  visibility: visible;
+
+  &.is-active {
+    position: absolute;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 1200px) {
+  .module-contact {
+    width: 100%;
+  }
+}

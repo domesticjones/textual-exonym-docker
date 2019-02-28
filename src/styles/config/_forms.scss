@@ -372,10 +372,12 @@ input[type="reset"]:focus {
 .wpcf7-response-output:empty {
   display: none;
 }
+
 .form-element {
   border-bottom: 2px solid $white;
   position: relative;
   margin-bottom: 1em;
+  width: 100%;
   @include transition();
 
   span {
@@ -386,12 +388,13 @@ input[type="reset"]:focus {
     position: absolute;
     color: $grey;
     font-style: $font-italic;
-    bottom: 0;
+    top: 0.15em;
     transform-origin: left;
     @include transition();
   }
 
-  input {
+  input,
+  textarea {
     margin: 0;
     padding-left: 0;
   }
@@ -403,6 +406,10 @@ input[type="reset"]:focus {
       transform: scale(0.65) translateY(-2em);
       color: $grey-trans;
     }
+  }
+
+  &.half {
+    width: calc(50% - 1em);
   }
 
   .wpcf7-not-valid-tip {
