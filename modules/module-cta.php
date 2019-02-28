@@ -5,7 +5,7 @@
   $paragraph = $cta['content']['paragraph'];
   if($cta):
 ?>
-  <footer id="textual-demo-request" class="footer-cta wrap">
+  <footer id="demo" class="footer-cta wrap">
     <div class="footer-cta-inner">
       <div class="content">
         <?php

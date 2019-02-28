@@ -38,7 +38,7 @@ export default {
       }
     });
 
-    // Scroll to Targets
+    // Focus first demo field on select
     function scrollToTarget(source, target, speed = 0) {
       $(source).on('click', (e) => {
         e.preventDefault();
@@ -48,7 +48,7 @@ export default {
         $(`${target} input:visible:enabled:first`).focus();
       });
     }
-    const ctaObject = '#textual-demo-request';
+    const ctaObject = '#demo';
     scrollToTarget('a[href="#demo"]', ctaObject);
 
     // Check for demo form submission
