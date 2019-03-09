@@ -1,0 +1,15 @@
+.module-404 {
+  padding: $globalPad 0 0 0;
+  text-align: center;
+
+  h1 {
+    font-size: 12em;
+
+    span {
+      display: block;
+      font-size: 0.25em;
+      font-family: $font-default;
+      font-weight: $font-light;
+    }
+  }
+}

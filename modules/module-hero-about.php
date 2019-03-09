@@ -7,6 +7,19 @@
     while(have_rows('about_hero')): the_row();
       if(get_row_layout() == 'heading') {
         echo '<h1 class="hero-about-heading hero-about-item">' . get_sub_field('about_heading') . '</h1>';
+      } elseif(get_row_layout() == 'list') {
+        $heading = get_sub_field('list_heading');
+        if(have_rows('about_list') || $heading):
+          echo '<div class="hero-about-list hero-about-item"><strong>' . $heading . '</strong>';
+          if(have_rows('about_list')):
+            echo '<ul>';
+              while(have_rows('about_list')): the_row();
+                echo '<li>' . get_sub_field('item') . '</li>';
+              endwhile;
+            echo '</ul>';
+          endif;
+          echo'</div>';
+        endif;
       } elseif(get_row_layout() == 'paragraph') {
         echo '<p class="hero-about-paragraph hero-about-item">' . get_sub_field('about_paragraph') . '</p>';
       } elseif(get_row_layout() == 'quote') {

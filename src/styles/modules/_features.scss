@@ -45,7 +45,7 @@ li.feature-large {
 
 a.button.feature-cta {
   @include grid(flex-start, center);
-  font-size: 1em;
+  font-size: 1.15em;
   text-transform: none;
   font-family: $font-default;
   font-weight: $font-normal;

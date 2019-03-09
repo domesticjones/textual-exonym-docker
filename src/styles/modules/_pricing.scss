@@ -128,18 +128,6 @@ li.pricing-single {
 
 .pricing-button {
   position: relative;
-
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0.25em;
-    z-index: 0;
-    background-color: $blue-trans;
-    width: calc(100% - 0.5em);
-    height: 0.5em;
-  }
 }
 
 @media (max-width: 1024px) {

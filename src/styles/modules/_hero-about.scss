@@ -29,7 +29,7 @@
 }
 
 .hero-about-item {
-  padding: 0 0 3rem 0;
+  padding: 0 0 2rem 0;
   margin: 0;
 
   &:last-child {
@@ -37,10 +37,23 @@
   }
 }
 
+.hero-about-list {
+  strong {
+    display: block;
+    font-size: 1.25em;
+    color: $grey;
+    margin-bottom: 0.5em;
+  }
+
+  ul {
+    margin-bottom: 0;
+  }
+}
+
 $aboutPadStart: 10vw;
-@for $i from 1 through 8 {
+@for $i from 1 through 10 {
   .hero-about-item:nth-child(#{$i}) {
-    margin-left: #{$aboutPadStart - ($i * 1.5)};
+    margin-left: #{$aboutPadStart - ($i * 0.85)};
   }
 }
 

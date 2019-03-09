@@ -1,3 +1,66 @@
 body.login {
-  
+  background-color: $grey;
+
+  a {
+    color: $black !important;
+
+    &:hover {
+      color: $blue !important;
+    }
+  }
+
+  #login h1 a, .login h1 a {
+    width: 100%;
+    background-size: 80% auto;
+  }
+
+  label {
+    letter-spacing: 0;
+    color: transparentize($white, 0.5);
+    font-size: 0.75em;
+
+    br {
+      display: none;
+    }
+  }
+
+  form {
+  background-color: $blue;
+  background-image: radial-gradient(ellipse at bottom, $blue 0%, $blue-dark 100%);
+  color: $white;
+
+    .input {
+      margin: 0 0 1em 0;
+      padding: 0.25em 0;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      box-shadow: none;
+      height: auto;
+      font-size: 1rem;
+      border-bottom: 2px solid $white;
+      color: $white;
+    }
+  }
+
+  &.wp-core-ui .button-group.button-large .button,
+  &.wp-core-ui .button.button-large {
+    font-size: 1em;
+    background-color: $white;
+    text-shadow: none;
+    color: $blue;
+    padding: 0.25em 1em;
+    height: auto;
+    border-radius: 0;
+
+    &:hover {
+      background-color: $grey;
+    }
+  }
+
+  #nav, #backtoblog {
+    text-align: center;
+    padding: 0;
+    margin: 1em;
+  }
 }

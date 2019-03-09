@@ -14,7 +14,15 @@
         echo '<h2 class="subscribers">Unlimited' . '<span>' . $info['labels']['subscribers_label'] . '</span></h2>';
       }
       if($plan['icon']) { echo '<div class="icon"><span><img src="' . $plan['icon']['sizes']['small'] . '" alt="" /></span></div>'; }
-      if($plan['messages']) { echo '<h3 class="messages">' . number_format($plan['messages']) . ' Messages<span>(' . $info['labels']['messages_label'] . ')</span></h3>'; }
+      if($plan['messages'] || $info['labels']['messages_label']) {
+        $messages = '';
+        if($plan['messages']) {
+          $messages = number_format($plan['messages']);
+        } else {
+          $messages = 'Unlimited';
+        }
+        echo '<h3 class="messages">' . $messages . ' Messages<span>(' . $info['labels']['messages_label'] . ')</span></h3>';
+      }
       if($info['features']) {
         echo '<ul class="features">';
         foreach($info['features'] as $feature) {

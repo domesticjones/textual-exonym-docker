@@ -3,6 +3,7 @@
   padding: ($globalPad / 4) ($globalPad / 2);
   width: calc(100% - #{$globalPad * 2});
   position: absolute;
+  z-index: -1;
   opacity: 0;
   margin-bottom: $globalPad;
 
@@ -29,6 +30,7 @@
   &.is-active {
     position: relative;
     opacity: 1;
+    z-index: 987
   }
 }
 

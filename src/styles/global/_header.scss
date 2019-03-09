@@ -7,7 +7,7 @@
 
   & > .wrap {
     @include grid(space-between, center);
-    height: $globalPad;
+    min-height: $globalPad;
     position: relative;
     z-index: 1;
     background-color: $white;
@@ -16,13 +16,14 @@
 
 .logo-header {
   display: block;
-  height: 1.5vw;
+  height: 5.25em;
   width: auto;
+  padding: 1.5em 0;
 }
 
 .nav-header {
   @include navMenu('horizontal');
-  font-size: 0.9em;
+  font-size: 1em;
   letter-spacing: 0.025ex;
 
   a {
@@ -38,7 +39,7 @@
 }
 
 .nav-header-buttons {
-  font-size: 0.85em;
+  font-size: 1em;
   letter-spacing: 0.035ex;
 
   ul {
@@ -56,12 +57,7 @@
 
 @media (max-width: 1024px) {
   #header .wrap {
-    height: $globalPadTablet;
-  }
-
-  .logo-header {
-    height: 2.5vw;
-    width: auto;
+    min-height: $globalPadTablet;
   }
 }
 
@@ -78,11 +74,11 @@
 
 @media (max-width: 768px) {
   #header .wrap {
-    height: 3rem;
+    height: 4rem;
   }
 
   .logo-header {
-    height: 1.75rem;
+    height: 4.75em;
     width: auto;
   }
 }

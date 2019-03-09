@@ -12,7 +12,7 @@
           if($heading) { echo '<h1>' . $heading . '</h1>'; }
           if($paragraph) { echo '<p>' . $paragraph . '</p>'; }
           echo '<div class="cta-wrap">';
-          echo do_shortcode('[contact-form-7 id="160" title="Call to Action (Hero)"]');
+          echo do_shortcode('[contact-form-7 id="159" title="Call to Action"]');
             get_template_part('modules/module', 'cta-complete');
           echo '</div>';
         ?>

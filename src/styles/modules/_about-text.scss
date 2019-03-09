@@ -1,0 +1,15 @@
+.module-about-text {
+  padding: $globalPad;
+  font-size: 1.25em;
+  background-color: $grey;
+
+  & > * {
+    max-width: 768px;
+    margin: auto;
+
+    &:last-child {
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+  }
+}
