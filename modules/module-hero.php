@@ -6,6 +6,7 @@
     $bgDevice = wp_get_attachment_image_src($randHero['device']['ID'], 'large');
     $tagline = get_field('hero_tagline');
     $heading = get_field('hero_heading');
+    $headingSub = get_field('hero_sub_heading');
     $content = get_field('hero_content');
 ?>
   <header class="module-hero">
@@ -15,6 +16,7 @@
         <?php
           if($tagline) { echo '<span class="tagline">' . $tagline . '</span>'; }
           if($heading) { echo '<span class="heading">' . $heading . '</span>'; }
+          if($headingSub) { echo '<span class="sub-heading">' . $headingSub . '</span>'; }
         ?>
       </h1>
       <?php

@@ -83,11 +83,12 @@
     display: block;
   }
 
-  .tagline {
+  .tagline,
+  .sub-heading {
     font-size: 0.55em;
     color: $grey;
     font-family: $font-default;
-    margin-bottom: 1em;
+    margin-bottom: 0.75em;
     font-weight: $font-light;
   }
 
@@ -95,6 +96,10 @@
     font-size: 2em;
     text-transform: uppercase;
     margin-left: -0.05ex;
+  }
+
+  .sub-heading {
+    margin: 0.75em 0 2em 0;
   }
 }
 

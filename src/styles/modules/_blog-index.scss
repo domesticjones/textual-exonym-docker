@@ -74,6 +74,7 @@ a.blog-index-single-image {
   width: 40%;
   background-size: cover;
   background-position: center center;
+  background-repeat : no-repeat;
 
   img {
     display: none;
@@ -89,6 +90,16 @@ a.blog-index-single-image {
     height: 100%;
     background-color: transparentize($black, 0.65);
   }
+
+  &.blog-index-single-image-logo {
+    background-image: $icon-textual-emblem;
+    background-size: 50% auto;
+    opacity: 0.25;
+
+    &::after {
+      display: none;
+    }
+  }
 }
 
 .blog-index-single-data {
@@ -96,7 +107,7 @@ a.blog-index-single-image {
   padding: 2em 2em 2em 0;
 
   h2 {
-    color: $blue;
+    color: $black;
     margin-bottom: 0.25em;
   }
 

@@ -160,6 +160,30 @@ ol {
     margin-bottom: 0.25em;
     line-height: 1.5em;
   }
+
+  ul, ol {
+    margin-bottom: 0.25em;
+  }
+
+  ol {
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+    }
+  }
+
+  ul {
+    list-style-type: disc;
+
+    ul {
+      list-style-type: circle;
+
+      ul {
+        list-style-type: square;
+      }
+    }
+  }
 }
 
 ul {

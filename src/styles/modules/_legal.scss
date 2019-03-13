@@ -1,0 +1,18 @@
+.module-legal {
+  max-width: 1200px;
+  margin: $globalPad auto;
+
+  h1.legal-header {
+    text-align: center;
+  }
+
+  h2, h3, h4 {
+    margin: 0.25em 0;
+  }
+
+  ul, ol {
+    p {
+      padding-bottom: 0.25em;
+    }
+  }
+}
