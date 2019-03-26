@@ -67,7 +67,7 @@ export default {
       $('body').addClass('textual-demo-false');
       localStorage.setItem('textualDemo', '1');
       $('html, body').animate({
-        scrollTop: $(target).offset().top
+        scrollTop: $(ctaObject).offset().top
       }, 0);
     }, false);
 

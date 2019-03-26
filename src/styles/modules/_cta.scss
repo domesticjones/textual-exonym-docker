@@ -90,7 +90,7 @@ a.button-cta-contact {
 body.textual-demo {
   &-false {
     #wpcf7-f160-p9-o1,
-    #wpcf7-f160-o2 {
+    #wpcf7-f159-o2 {
       display: none;
     }
   }
@@ -112,6 +112,11 @@ div.wpcf7-response-output {
   width: 100%;
   margin: 1em 0;
   padding: 1em;
+}
+
+.form-element.lks93bg89n3 {
+  position: absolute;
+  left: -99999px;
 }
 
 @media (max-width: 1200px) {
